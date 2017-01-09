@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="gb2312">
+	<title>2017鸡年新年倒计时</title>
+	<style>
+		*{
+			font-family:arial,sans-serif;
+			text-align:center;
+
+		}
+	
+		p{
+			line-height:5em;
+			font-weight:bold;
+			color:green;
+		}
+		
+		fieldset{
+			margin:10px auto;
+			width:300px;
+			height:70px;
+			color:green;
+			font-weight:bold;
+			border:3px solid rgb(255,215,0);
+			border-radius:1em;
+		}
+		
+		span{
+			line-height:2.5em;
+			font-size:1.5em;
+			color:#cc0000;
+		}
+	</style>
+	<script>
+	window.onload = function(){
+		function showTime(){
+			var end = new Date("2017/01/28 00:00:00");
+			var now = new Date();
+			
+			var t = end.getTime() - now.getTime(),//t是剩下的毫秒数
+				y = 0,
+				m = 0,
+				d = 0,
+				h = 0,
+				min = 0,
+				s = 0;
+			
+			if(t>=0){
+				y=Math.floor(t/1000/60/60/24/31/12);//毫秒、秒、分钟、小时、天、月、年
+				m=Math.floor(t/1000/60/60/24/31%12);
+				d=Math.floor(t/1000/60/60/24%31);
+				h=Math.floor(t/1000/60/60%24);//求小时的就是t/1000/60/60%24；意思是总的小时数这个叫“模”。也就是总的整的天数抛开，咱只取多余的小时数。上同。
+				min=Math.floor(t/1000/60%60);
+				s=Math.floor(t/1000%60);
+			}//end if
+			
+			document.getElementById("t_y").innerHTML = y + "年"
+			document.getElementById("t_m").innerHTML = m + "月"
+			document.getElementById("t_d").innerHTML = d + "天";
+			document.getElementById("t_h").innerHTML = h + "时";
+			document.getElementById("t_min").innerHTML = min + "分";
+			document.getElementById("t_s").innerHTML = s + "秒";
+		}//end showTime()
+		
+      setInterval(showTime,0);//设置成1000也可以，但是页面加载时要过1秒才能显示倒计时
+		
+	}//end window
+	</script>
+</head>
+<body>
+	<p>Countdown to 2017 the Year of Rooster:</p>
+	<fieldset>
+		<legend>距离2017鸡年还有</legend>
+		<span id="t_y">00月</span>
+		<span id="t_m">00月</span>
+		<span id="t_d">00天</span>
+		<span id="t_h">00时</span>
+		<span id="t_min">00分</span>
+		<span id="t_s">00秒</span>
+	</fieldset>
+</body>
+</html>
