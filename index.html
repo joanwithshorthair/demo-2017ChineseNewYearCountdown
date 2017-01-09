@@ -1,8 +1,8 @@
-<!doctype html>
+ï»¿<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="gb2312">
-	<title>2017¼¦ÄêĞÂÄêµ¹¼ÆÊ±</title>
+	<title>2017é¸¡å¹´æ–°å¹´å€’è®¡æ—¶</title>
 	<style>
 		*{
 			font-family:arial,sans-serif;
@@ -38,7 +38,7 @@
 			var end = new Date("2017/01/28 00:00:00");
 			var now = new Date();
 			
-			var t = end.getTime() - now.getTime(),//tÊÇÊ£ÏÂµÄºÁÃëÊı
+			var t = end.getTime() - now.getTime(),//tæ˜¯å‰©ä¸‹çš„æ¯«ç§’æ•°
 				y = 0,
 				m = 0,
 				d = 0,
@@ -47,23 +47,23 @@
 				s = 0;
 			
 			if(t>=0){
-				y=Math.floor(t/1000/60/60/24/31/12);//ºÁÃë¡¢Ãë¡¢·ÖÖÓ¡¢Ğ¡Ê±¡¢Ìì¡¢ÔÂ¡¢Äê
+				y=Math.floor(t/1000/60/60/24/31/12);//æ¯«ç§’ã€ç§’ã€åˆ†é’Ÿã€å°æ—¶ã€å¤©ã€æœˆã€å¹´
 				m=Math.floor(t/1000/60/60/24/31%12);
 				d=Math.floor(t/1000/60/60/24%31);
-				h=Math.floor(t/1000/60/60%24);//ÇóĞ¡Ê±µÄ¾ÍÊÇt/1000/60/60%24£»ÒâË¼ÊÇ×ÜµÄĞ¡Ê±ÊıÕâ¸ö½Ğ¡°Ä£¡±¡£Ò²¾ÍÊÇ×ÜµÄÕûµÄÌìÊıÅ×¿ª£¬ÔÛÖ»È¡¶àÓàµÄĞ¡Ê±Êı¡£ÉÏÍ¬¡£
+				h=Math.floor(t/1000/60/60%24);//æ±‚å°æ—¶çš„å°±æ˜¯t/1000/60/60%24ï¼›æ„æ€æ˜¯æ€»çš„å°æ—¶æ•°è¿™ä¸ªå«â€œæ¨¡â€ã€‚ä¹Ÿå°±æ˜¯æ€»çš„æ•´çš„å¤©æ•°æŠ›å¼€ï¼Œå’±åªå–å¤šä½™çš„å°æ—¶æ•°ã€‚ä¸ŠåŒã€‚
 				min=Math.floor(t/1000/60%60);
 				s=Math.floor(t/1000%60);
 			}//end if
 			
-			document.getElementById("t_y").innerHTML = y + "Äê"
-			document.getElementById("t_m").innerHTML = m + "ÔÂ"
-			document.getElementById("t_d").innerHTML = d + "Ìì";
-			document.getElementById("t_h").innerHTML = h + "Ê±";
-			document.getElementById("t_min").innerHTML = min + "·Ö";
-			document.getElementById("t_s").innerHTML = s + "Ãë";
+			document.getElementById("t_y").innerHTML = y + "å¹´"
+			document.getElementById("t_m").innerHTML = m + "æœˆ"
+			document.getElementById("t_d").innerHTML = d + "å¤©";
+			document.getElementById("t_h").innerHTML = h + "æ—¶";
+			document.getElementById("t_min").innerHTML = min + "åˆ†";
+			document.getElementById("t_s").innerHTML = s + "ç§’";
 		}//end showTime()
 		
-      setInterval(showTime,0);//ÉèÖÃ³É1000Ò²¿ÉÒÔ£¬µ«ÊÇÒ³Ãæ¼ÓÔØÊ±Òª¹ı1Ãë²ÅÄÜÏÔÊ¾µ¹¼ÆÊ±
+      setInterval(showTime,0);//è®¾ç½®æˆ1000ä¹Ÿå¯ä»¥ï¼Œä½†æ˜¯é¡µé¢åŠ è½½æ—¶è¦è¿‡1ç§’æ‰èƒ½æ˜¾ç¤ºå€’è®¡æ—¶
 		
 	}//end window
 	</script>
@@ -71,13 +71,13 @@
 <body>
 	<p>Countdown to 2017 the Year of Rooster:</p>
 	<fieldset>
-		<legend>¾àÀë2017¼¦Äê»¹ÓĞ</legend>
-		<span id="t_y">00ÔÂ</span>
-		<span id="t_m">00ÔÂ</span>
-		<span id="t_d">00Ìì</span>
-		<span id="t_h">00Ê±</span>
-		<span id="t_min">00·Ö</span>
-		<span id="t_s">00Ãë</span>
+		<legend>è·ç¦»2017é¸¡å¹´è¿˜æœ‰</legend>
+		<span id="t_y">00æœˆ</span>
+		<span id="t_m">00æœˆ</span>
+		<span id="t_d">00å¤©</span>
+		<span id="t_h">00æ—¶</span>
+		<span id="t_min">00åˆ†</span>
+		<span id="t_s">00ç§’</span>
 	</fieldset>
 </body>
 </html>
